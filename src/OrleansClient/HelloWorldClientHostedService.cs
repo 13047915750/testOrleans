@@ -41,15 +41,18 @@ namespace OrleansClient
 
             //Console.WriteLine(key.ToString());
             var key = Guid.Parse("b7f409a1-9893-4081-a99d-4a3e5f154b7a");
+            var i = 0;
             while (true)
             {
+                i++;
                 var grain = this._client.GetGrain<IJournalTestGrain>(key);
                 var flag = await grain.AddEvents(new Grain.Models.JournaledEvent());
                 if (flag)
                 {
+                    Console.WriteLine($"{i}");
                     Console.WriteLine("开始等待");
-                    await Task.Delay(10 * 60 *1000);
-                    Console.WriteLine("等待10秒后继续请求");
+                    await Task.Delay(5 *1000);
+                    Console.WriteLine("等待5秒后继续请求");
 
                     await grain.Get();
 

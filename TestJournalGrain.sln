@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJournalGrain", "TestJournalGrain\TestJournalGrain.csproj", "{E4947F37-AB7A-4BBF-ADE5-0442D1B1A099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestJournalGrain", "TestJournalGrain\TestJournalGrain.csproj", "{E4947F37-AB7A-4BBF-ADE5-0442D1B1A099}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Grains", "src\Test.Grains\Test.Grains.csproj", "{0FB83CA7-584B-479F-AF00-137AEC16A32D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Grains", "src\Test.Grains\Test.Grains.csproj", "{0FB83CA7-584B-479F-AF00-137AEC16A32D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Interfaces", "src\Test.Interfaces\Test.Interfaces.csproj", "{D7A5FCEB-1876-4DD0-8E41-396CD5FA5EB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Interfaces", "src\Test.Interfaces\Test.Interfaces.csproj", "{D7A5FCEB-1876-4DD0-8E41-396CD5FA5EB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansClient", "src\OrleansClient\OrleansClient.csproj", "{9BA4694F-4D61-4671-BC05-9ED6EB13BDA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrleansClient", "src\OrleansClient\OrleansClient.csproj", "{9BA4694F-4D61-4671-BC05-9ED6EB13BDA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grain.Models", "src\Grain.Models\Grain.Models.csproj", "{A656FFB0-41ED-495B-BE48-7364FA4AB08D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grain.Models", "src\Grain.Models\Grain.Models.csproj", "{A656FFB0-41ED-495B-BE48-7364FA4AB08D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orleans.EventSourcing", "C:\Users\OC\Downloads\orleans-3.x\src\Orleans.EventSourcing\Orleans.EventSourcing.csproj", "{49C108A9-F3C1-4DBC-AAE5-556E52EEA0D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A656FFB0-41ED-495B-BE48-7364FA4AB08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A656FFB0-41ED-495B-BE48-7364FA4AB08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A656FFB0-41ED-495B-BE48-7364FA4AB08D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49C108A9-F3C1-4DBC-AAE5-556E52EEA0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C108A9-F3C1-4DBC-AAE5-556E52EEA0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C108A9-F3C1-4DBC-AAE5-556E52EEA0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C108A9-F3C1-4DBC-AAE5-556E52EEA0D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

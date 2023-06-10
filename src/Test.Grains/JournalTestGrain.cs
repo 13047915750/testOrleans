@@ -20,6 +20,8 @@ namespace Test.Grains
     {
         private bool flag = false;
 
+        int index = 0;
+
         public override async Task OnActivateAsync()
         {
 
@@ -51,8 +53,10 @@ namespace Test.Grains
             }
             flag = true;
             RaiseEvent(journaledEvent);
+            index++;
 
-            if (Version > 20)
+            var version = Version + this.UnconfirmedEvents.Count();
+            if (version > 20)
             {
                 Console.WriteLine("触发快照");
                 var snapshotGrain = GrainFactory.GetGrain<ISnapshotGrain>(this.GetPrimaryKey());
@@ -87,9 +91,12 @@ namespace Test.Grains
             //    GetType().FullName,
             //    GrainReference,
             //    grainState: new LogStateWithMetaDataAndETag<BaseEvent>());\
-           await  this.Clear(true);
+           Console.WriteLine(index);
 
-            Console.WriteLine($"{JsonConvert.SerializeObject(Version)}");
+           //this.Clear(true);
+           await this.Clear<ClearEvent, BaseEvent>(new  ClearEvent(), null);
+
+           Console.WriteLine($"{JsonConvert.SerializeObject(Version)}");
         }
     }
 }

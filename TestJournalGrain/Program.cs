@@ -53,7 +53,7 @@ namespace OrleansSiloHost
                     services.AddLogging(logging =>
                     {
                         logging.AddConsole();
-                        logging.SetMinimumLevel(LogLevel.Debug);
+                        logging.SetMinimumLevel(LogLevel.Information);
                     });
                     services.Configure<ConsoleLifetimeOptions>(options =>
                     {
